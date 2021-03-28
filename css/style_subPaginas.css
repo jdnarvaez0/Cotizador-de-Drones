@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+    background-color: #222;
+}
+
+
+.titulo{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cards{
+
+    margin: 55px;
+}
+
+.cards > card-img-top{
+    width: 100px;
+    height: 100px;
+}
+.bt-card{
+    margin-top: 15px;
+}
+
+
+/* ###################################################### */
+/* NO ES MI CSS */
+
+ul {
+    list-style: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 500px;
+    min-width: 500px;
+}

@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="./assets/img/icono-drone.png" sizes="64x64">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <title>Cotizador de Drones</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <button type="button" class="btn btn-outline-secondary navbar-brand">
+                <a href="../index.html"><img src="../assets/img/icono-drone.png" alt=""></a>
+            </button>
+            <div class="two columns u-pull-right container-carito">
+                <ul>
+                    <li class="submenu">
+                        <button type="button" class="btn btn-secondary">
+                            <img src="../assets/img/cart/cart4.svg" alt="">
+                        </button>
+                        <div id="carrito">
+
+                            <table id="lista-carrito" class="u-full-width table table-responsive table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <a id="vaciar-carrito" class="btn btn-primary" href="#" role="button">Vaciar Carrito</a>
+                                <a id="total" class="btn btn-primary" href="#" role="button">Total $<span></span> </a>
+                            </div>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="titulo1">COTIZADOR DE DRONES</h1>
+
+    <section>
+        <div class="constainer">
+            <!-- HELICES -->
+            <div class="cards row">
+                <div class="card text-white bg-secondary  mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Helices</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#helices">
+                            <img src="./assets/img/helice-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- MOTORES -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Motores</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#motores">
+                            <img src="./assets/img/motor-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- BATERIAS -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Baterias</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#baterias">
+                            <img src="./assets/img/bateria-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CONTROLES REMOTOS -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Controles</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#controles">
+                            <img src="./assets/img/remote-control-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CONTROLADORES DE VUEOS (CHIP) -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Chip de vuelo</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#chip">
+                            <img src="./assets/img/chip-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- CHASIS -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Chasis</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#chasis">
+                            <img src="./assets/img/chasis-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CAMARAS -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Camaras</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#camaras">
+                            <img src="./assets/img/drone-con-camara-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- GIMBAL -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Gimbal</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#gimbal">
+                            <img src="./assets/img/gimbal-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- FPV  -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 10rem;">
+                    <div class="card-header text-center ">Gafas FPV</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#fpv">
+                            <img src="./assets/img/fpv-card.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- MODAL HELICES -->
+    <div class="container" id="lista-productos">
+        <div class="modal fade" id="helices" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">HELICES</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/helices/helices1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">45mm bolsillo Quad-Prop Rotación de CW
+                                                (5pcs)
+                                            </h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>4.50</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="1">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/helices/helices2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">Gemfan QX350 PC 8020 2 palas Gris (CW
+                                                /
+                                                CCW)
+                                                (1 par)
+                                            </h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>3.18</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="2">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/helices/helices3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">8045 SF Puntales 2pc CW 2 pc CCW
+                                                rotación
+                                                (Flouro amarillo)</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>14.11</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="3">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/helices/helices4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">SF Puntales 2pc CW 2 pc CCW rotación
+                                                (azul)
+                                            </h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>3.89</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="4">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- fin modal helices -->
+
+        <!-- MODAl MOTORES -->
+        <div class="modal fade" id="motores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">MOTORES</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/motores/motores1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">TrackStar 380 sin sensores sin
+                                                escobillas
+                                                Motor 3800KV</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>28.55</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="5">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/motores/motores2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">TrackStar 1/10th Brushed Motor 550/21T
+                                                color
+                                                negro</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>9.44</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="6">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/motores/motores3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">Brushless Inrunner Motor 3674 2250KV
+                                                (1:10th -
+                                                540)</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>28.17</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="7">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/motores/motores4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">TrackStar 1/8 de motor sin escobillas
+                                                sin
+                                                sensores 2050KV</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>43.80</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="8">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin modal motores -->
+
+        <!-- MODAL BATERIAS -->
+        <div class="modal fade" id="baterias" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">BATERIAS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="lista-productos" class="container">
+                            <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/baterias/baterias1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">Turnigy High Capacity 12000mAh 4S 12C
+                                                Multi
+                                                Rotor</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>111.06</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="9">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/baterias/baterias2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">Turnigy Graphene 1400mAh Battery</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>19.49</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="10">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/baterias/baterias3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">Turnigy 5000mAh 4S1P 14.8V 20C
+                                                Hardcase</h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>34.02</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="11">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ">
+                                    <div class="card bg-dark border-primary">
+                                        <img src="./assets/img/baterias/baterias4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-sm-center">El grafeno Turnigy 7500mAh 2S2P
+                                                Estuche Lipo
+                                            </h5>
+                                            <div class="d-flex justify-content-around">
+                                                <button type="button"
+                                                    class="btn btn-primary precio">$<span>60.98</span></button>
+                                                <button type="button" class="btn btn-primary  btnNotify">
+                                                    <a data-id="12">
+                                                        <img class="agregar-carrito"
+                                                            src="../assets/img/cart/cart-plus.svg" alt="">
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin modal baterias -->
+
+        <!-- MODAL CONTROLES -->
+        <div class="container">
+            <div class="modal fade" id="controles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">CONTROLES</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                    <div class="col ">
+                                        <div class="card bg-dark border-primary">
+                                            <img src="./assets/img/controles/control1.jpg" class="card-img-top"
+                                                alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-sm-center">Turnigy 9X Transmisor 9Ch Modo 2
+                                                    con Módulo y Teceptor iA8</h5>
+                                                <div class="d-flex justify-content-around">
+                                                    <button type="button"
+                                                        class="btn btn-primary precio">$<span>69.99</span></button>
+                                                    <button type="button" class="btn btn-primary  btnNotify">
+                                                        <a data-id="13">
+                                                            <img class="agregar-carrito"
+                                                                src="../assets/img/cart/cart-plus.svg" alt="">
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col ">
+                                        <div class="card bg-dark border-primary">
+                                            <img src="./assets/img/controles/control2.jpg" class="card-img-top"
+                                                alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-sm-center">OrangeRx Tx10i Mode 2 EU Version
+                                                    10ch 2.4GHz DSMX Compatible</h5>
+                                                <div class="d-flex justify-content-around">
+                                                    <button type="button"
+                                                        class="btn btn-primary precio">$<span>93.79</span></button>
+                                                    <button type="button" class="btn btn-primary  btnNotify">
+                                                        <a data-id="14">
+                                                            <img class="agregar-carrito"
+                                                                src="../assets/img/cart/cart-plus.svg" alt="">
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col ">
+                                        <div class="card bg-dark border-primary">
+                                            <img src="./assets/img/controles/control3.jpg" class="card-img-top"
+                                                alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-sm-center">Turnigy T6A-V2 AFHDS Mode 2 2.4GHz
+                                                    6Ch Transmitter w/Receiver</h5>
+                                                <div class="d-flex justify-content-around">
+                                                    <button type="button"
+                                                        class="btn btn-primary precio">$<span>30.59</span></button>
+                                                    <button type="button" class="btn btn-primary  btnNotify">
+                                                        <a data-id="15">
+                                                            <img class="agregar-carrito"
+                                                                src="../assets/img/cart/cart-plus.svg" alt="">
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col ">
+                                        <div class="card bg-dark border-primary">
+                                            <img src="./assets/img/controles/control4.jpg" class="card-img-top"
+                                                alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-sm-center">OrangeRx Tx6i Mode 2 EU Version
+                                                    6ch 2.4GHz DSMX Compatible</h5>
+                                                <div class="d-flex justify-content-around">
+                                                    <button type="button"
+                                                        class="btn btn-primary precio">$<span>93.99</span></button>
+                                                    <button type="button" class="btn btn-primary  btnNotify">
+                                                        <a data-id="16">
+                                                            <img class="agregar-carrito"
+                                                                src="../assets/img/cart/cart-plus.svg" alt="">
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fin modal controles -->
+
+            <!-- MODAL  chip de vuelos -->
+            <div class="container">
+                <div class="modal fade" id="chip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Chip de vuelos</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                        <div class="col ">
+                                            <div class="card bg-dark border-primary">
+                                                <img src="./assets/img/chips/chip1.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-sm-center">Foxeer F722 V2 FPV Flight
+                                                        Controller
+                                                        w/MPU6000 Gyro </h5>
+                                                    <div class="d-flex justify-content-around">
+                                                        <button type="button"
+                                                            class="btn btn-primary precio">$<span>29.99</span></button>
+                                                        <button type="button" class="btn btn-primary  btnNotify">
+                                                            <a data-id="17">
+                                                                <img class="agregar-carrito"
+                                                                    src="../assets/img/cart/cart-plus.svg" alt="">
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col ">
+                                            <div class="card bg-dark border-primary">
+                                                <img src="./assets/img/chips/chip2.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-sm-center">Foxeer Mini F722 V2 FPV Flight
+                                                        Controller
+                                                        w/MPU6000 Gyro </h5>
+                                                    <div class="d-flex justify-content-around">
+                                                        <button type="button"
+                                                            class="btn btn-primary precio">$<span>29.99</span></button>
+                                                        <button type="button" class="btn btn-primary  btnNotify">
+                                                            <a data-id="18">
+                                                                <img class="agregar-carrito"
+                                                                    src="../assets/img/cart/cart-plus.svg" alt="">
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col ">
+                                            <div class="card bg-dark border-primary">
+                                                <img src="./assets/img/chips/chip4.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-sm-center"> Control de vuelo FLIP32 F3
+                                                        AIO-Lite con
+                                                        OSD incorporado </h5>
+                                                    <div class="d-flex justify-content-around">
+                                                        <button type="button"
+                                                            class="btn btn-primary precio">$<span>30.59</span></button>
+                                                        <button type="button" class="btn btn-primary  btnNotify">
+                                                            <a data-id="19">
+                                                                <img class="agregar-carrito"
+                                                                    src="../assets/img/cart/cart-plus.svg" alt="">
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col ">
+                                            <div class="card bg-dark border-primary">
+                                                <img src="./assets/img/controles/control4.jpg" class="card-img-top"
+                                                    alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-sm-center">OrangeRx Tx6i Mode 2 EU
+                                                        Version 6ch 2.4GHz
+                                                        DSMX Compatible</h5>
+                                                    <div class="d-flex justify-content-around">
+                                                        <button type="button"
+                                                            class="btn btn-primary precio">$<span>93.99</span></button>
+                                                        <button type="button" class="btn btn-primary  btnNotify">
+                                                            <a data-id="20">
+                                                                <img class="agregar-carrito"
+                                                                    src="../assets/img/cart/cart-plus.svg" alt="">
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fin modal chip de vuelo -->
+
+                <!-- MODAL CHASIS -->
+                <div class="container">
+                    <div class="modal fade" id="chasis" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CHASIS</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                            <div class="col ">
+                                                <div class="card bg-dark border-primary">
+                                                    <img src="./assets/img/chasis/chasis1.jpg" class="card-img-top"
+                                                        alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-sm-center">SpyderByte 190 Rayo X
+                                                            Racing aviones no tripulados</h5>
+                                                        <div class="d-flex justify-content-around">
+                                                            <button type="button"
+                                                                class="btn btn-primary precio">$<span>54.55</span></button>
+                                                            <button type="button" class="btn btn-primary  btnNotify">
+                                                                <a data-id="21">
+                                                                    <img class="agregar-carrito"
+                                                                        src="../assets/img/cart/cart-plus.svg" alt="">
+                                                                </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col ">
+                                                <div class="card bg-dark border-primary">
+                                                    <img src="./assets/img/chasis/chasis2.jpg" class="card-img-top"
+                                                        alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-sm-center">Shendrones Mixuko 196
+                                                            (Juego de Estructura)</h5>
+                                                        <div class="d-flex justify-content-around">
+                                                            <button type="button"
+                                                                class="btn btn-primary precio">$<span>82.29</span></button>
+                                                            <button type="button" class="btn btn-primary  btnNotify">
+                                                                <a data-id="22">
+                                                                    <img class="agregar-carrito"
+                                                                        src="../assets/img/cart/cart-plus.svg" alt="">
+                                                                </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col ">
+                                                <div class="card bg-dark border-primary">
+                                                    <img src="./assets/img/chasis/chasis3.jpg" class="card-img-top"
+                                                        alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-sm-center">Marco Armattan FPV
+                                                            Morphite X155</h5>
+                                                        <div class="d-flex justify-content-around">
+                                                            <button type="button"
+                                                                class="btn btn-primary precio">$<span>39.99</span></button>
+                                                            <button type="button" class="btn btn-primary  btnNotify">
+                                                                <a data-id="23">
+                                                                    <img class="agregar-carrito"
+                                                                        src="../assets/img/cart/cart-plus.svg" alt="">
+                                                                </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col ">
+                                                <div class="card bg-dark border-primary">
+                                                    <img src="./assets/img/chasis/chasis4.jpg" class="card-img-top"
+                                                        alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-sm-center">Tortazo 300 de Premium
+                                                            Ready FPV marco plegable</h5>
+                                                        <div class="d-flex justify-content-around">
+                                                            <button type="button"
+                                                                class="btn btn-primary precio">$<span>58.94</span></button>
+                                                            <button type="button" class="btn btn-primary  btnNotify">
+                                                                <a data-id="24">
+                                                                    <img class="agregar-carrito"
+                                                                        src="../assets/img/cart/cart-plus.svg" alt="">
+                                                                </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin modal CHASIS -->
+
+                    <!-- MODAL CAMARAS -->
+                    <div class="container">
+                        <div class="modal fade" id="camaras" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">CAMARAS</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                                <div class="col ">
+                                                    <div class="card bg-dark border-primary">
+                                                        <img src="./assets/img/camaras/camara1.png" class="card-img-top"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-sm-center">CADDX Baby Ratel
+                                                                Starlight 1.8mm 1200TVL 14x14mm</h5>
+                                                            <div class="d-flex justify-content-around">
+                                                                <button type="button"
+                                                                    class="btn btn-primary precio">$<span>30.99</span></button>
+                                                                <button type="button"
+                                                                    class="btn btn-primary  btnNotify">
+                                                                    <a data-id="25">
+                                                                        <img class="agregar-carrito"
+                                                                            src="../assets/img/cart/cart-plus.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col ">
+                                                    <div class="card bg-dark border-primary">
+                                                        <img src="./assets/img/camaras/camara2.jpg" class="card-img-top"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-sm-center">CADDX Ratel Mini
+                                                                Starlight 1.8mm 1200TVL 22x22mm</h5>
+                                                            <div class="d-flex justify-content-around">
+                                                                <button type="button"
+                                                                    class="btn btn-primary precio">$<span>34.90</span></button>
+                                                                <button type="button"
+                                                                    class="btn btn-primary  btnNotify">
+                                                                    <a data-id="26">
+                                                                        <img class="agregar-carrito"
+                                                                            src="../assets/img/cart/cart-plus.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col ">
+                                                    <div class="card bg-dark border-primary">
+                                                        <img src="./assets/img/camaras/camara3.jpg" class="card-img-top"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-sm-center">Marco Armattan FPV
+                                                                Morphite X155</h5>
+                                                            <div class="d-flex justify-content-around">
+                                                                <button type="button"
+                                                                    class="btn btn-primary precio">$<span>25.99</span></button>
+                                                                <button type="button"
+                                                                    class="btn btn-primary  btnNotify">
+                                                                    <a data-id="27">
+                                                                        <img class="agregar-carrito"
+                                                                            src="../assets/img/cart/cart-plus.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col ">
+                                                    <div class="card bg-dark border-primary">
+                                                        <img src="./assets/img/camaras/camara4.jpg" class="card-img-top"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-sm-center">Foxeer Predator 5
+                                                                Super WDR Micro FPV Camera (Naked)</h5>
+                                                            <div class="d-flex justify-content-around">
+                                                                <button type="button"
+                                                                    class="btn btn-primary precio">$<span>58.94</span></button>
+                                                                <button type="button"
+                                                                    class="btn btn-primary  btnNotify">
+                                                                    <a data-id="28">
+                                                                        <img class="agregar-carrito"
+                                                                            src="../assets/img/cart/cart-plus.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin modal CHASIS -->
+
+                        <!-- MODAL GIMBAL -->
+                        <div class="container">
+                            <div class="modal fade" id="gimbal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">GIMBAL</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                                    <div class="col ">
+                                                        <div class="card bg-dark border-primary">
+                                                            <img src="./assets/img/gimbal/gimbal1.jpg"
+                                                                class="card-img-top" alt="...">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-sm-center">Quanum Q-3D sin
+                                                                    escobillas de 3 ejes cardán de la cámara</h5>
+                                                                <div class="d-flex justify-content-around">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary precio">$<span>168.10</span></button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary  btnNotify">
+                                                                        <a data-id="29">
+                                                                            <img class="agregar-carrito"
+                                                                                src="../assets/img/cart/cart-plus.svg"
+                                                                                alt="">
+                                                                        </a>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col ">
+                                                        <div class="card bg-dark border-primary">
+                                                            <img src="./assets/img/gimbal/gimbal2.jpg"
+                                                                class="card-img-top" alt="...">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-sm-center">CADDX Ratel Mini
+                                                                    Starlight 1.8mm 1200TVL 22x22mm</h5>
+                                                                <div class="d-flex justify-content-around">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary precio">$<span>123.45</span></button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary  btnNotify">
+                                                                        <a data-id="30">
+                                                                            <img class="agregar-carrito"
+                                                                                src="../assets/img/cart/cart-plus.svg"
+                                                                                alt="">
+                                                                        </a>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col ">
+                                                        <div class="card bg-dark border-primary">
+                                                            <img src="./assets/img/gimbal/gimbal3.jpg"
+                                                                class="card-img-top" alt="...">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-sm-center">Tablero de cardán
+                                                                    sin escobillas de Metal BGC 2.2 RC</h5>
+                                                                <div class="d-flex justify-content-around">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary precio">$<span>190.00</span></button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary  btnNotify">
+                                                                        <a data-id="31">
+                                                                            <img class="agregar-carrito"
+                                                                                src="../assets/img/cart/cart-plus.svg"
+                                                                                alt="">
+                                                                        </a>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col ">
+                                                        <div class="card bg-dark border-primary">
+                                                            <img src="./assets/img/gimbal/gimbal4.png"
+                                                                class="card-img-top" alt="...">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-sm-center">Brazo De Camara
+                                                                    Cardan Con Cable Plano Para Dji Mavic Pro</h5>
+                                                                <div class="d-flex justify-content-around">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary precio">$<span>55.90</span></button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary  btnNotify">
+                                                                        <a data-id="32">
+                                                                            <img class="agregar-carrito"
+                                                                                src="../assets/img/cart/cart-plus.svg"
+                                                                                alt="">
+                                                                        </a>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fin modal GIMBAL -->
+
+                            <!-- MODAL GIMBAL -->
+                            <div class="container">
+                                <div class="modal fade" id="fpv" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">GAFAS FPV</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row row-cols-1 row-cols-md-2 g-3 ">
+                                                        <div class="col ">
+                                                            <div class="card bg-dark border-primary">
+                                                                <img src="./assets/img/fpv/fpv1.png"
+                                                                    class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title text-sm-center">FatShark
+                                                                        Dominator HDO2 FPV Headset w/46 Degree</h5>
+                                                                    <div class="d-flex justify-content-around">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary precio">$<span>499.00</span></button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary  btnNotify">
+                                                                            <a data-id="29">
+                                                                                <img class="agregar-carrito"
+                                                                                    src="../assets/img/cart/cart-plus.svg"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col ">
+                                                            <div class="card bg-dark border-primary">
+                                                                <img src="./assets/img/fpv/fpv2.png"
+                                                                    class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title text-sm-center">Walkera Goggle
+                                                                        2 Visor Fpv Drone Camara</h5>
+                                                                    <div class="d-flex justify-content-around">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary precio">$<span>350.00</span></button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary  btnNotify">
+                                                                            <a data-id="30">
+                                                                                <img class="agregar-carrito"
+                                                                                    src="../assets/img/cart/cart-plus.svg"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col ">
+                                                            <div class="card bg-dark border-primary">
+                                                                <img src="./assets/img/fpv/fpv3.png"
+                                                                    class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title text-sm-center">Gafas Eachine
+                                                                        Ev100 Goggles Drone Fpv Doble Antena A</h5>
+                                                                    <div class="d-flex justify-content-around">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary precio">$<span>89.55</span></button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary  btnNotify">
+                                                                            <a data-id="31">
+                                                                                <img class="agregar-carrito"
+                                                                                    src="../assets/img/cart/cart-plus.svg"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col ">
+                                                            <div class="card bg-dark border-primary">
+                                                                <img src="./assets/img/fpv/fpv4.png"
+                                                                    class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title text-sm-center">Gafas Fpv
+                                                                        Eachine Ev200d 72ch 5,8ghz 1280x720 Dvr</h5>
+                                                                    <div class="d-flex justify-content-around">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary precio">$<span>96.44</span></button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary  btnNotify">
+                                                                            <a data-id="32">
+                                                                                <img class="agregar-carrito"
+                                                                                    src="../assets/img/cart/cart-plus.svg"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fin modal GIMBAL -->
+
+
+                                <!-- fin -->
+                            </div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/notify.js"></script>
+
+    <!-- <script src="./js/scrollReveal.js"></script> -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/mainNotify.js"></script>
+
+</body>
+
+</html>
